@@ -1,0 +1,207 @@
+.anaPage_content {
+  display: none;
+
+  position: relative;
+  width: 60vw;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  display: none;
+}
+
+.ana_chapter {
+  width: 57%;
+  padding-left: 3%;
+}
+
+.ana_chapter a {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 6rem;
+}
+
+.ana_box {
+  position: relative;
+
+  width: 60vw;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+}
+
+.ana_item_header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ana_item {
+  padding: 5% 0 5% 0;
+
+  border-width: 0 0 2px 0;
+  border-color: rgba(87, 135, 255, 0.3);
+  border-style: dashed;
+}
+
+.ana_container {
+  position: relative;
+
+  left: 9%;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /**/
+  width: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+
+  padding: 2% 6% 2% 3%;
+}
+
+.wrong {
+  border-color: #FF7A72;
+  color: #FF7A72;
+}
+
+.correct {
+  border-color: #5988FF;
+  color: #5988FF;
+}
+
+.ana_ans_word {
+  position: relative;
+  left: 10%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.ana_checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4%;
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.ana_wrong_checkmark:after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #FF7A72;
+}
+
+.ana_correct_checkmark:after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #5988FF;
+}
+
+.ana_word_box {
+  width: 91%;
+  margin-top: 2%;
+  margin-left: 9%;
+}
+
+.ana_topic_ch {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.ana_word {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.ana_title_item_box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  display: flex;
+  width: 57%;
+}
+
+@media (max-width: 1000px) {
+  body::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+  }
+  .ana_chapter a {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+  .ana_container {
+    left: 11%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .anaPage_content {
+    width: 100vw;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+  .ana_chapter a {
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+
+  .ana_box {
+    width: 100vw;
+  }
+
+  .ana_container {
+    left: 15%;
+    width: 75%;
+    padding: 3.5% 7% 3.5% 3.5%;
+  }
+
+  .ana_ans_word {
+    left: 14%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .ana_word_box {
+    width: 75%;
+    margin-left: 15%;
+  }
+
+  .ana_topic_ch {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .ana_word {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

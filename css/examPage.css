@@ -1,0 +1,335 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: #fff;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.examPage_content {
+  position: relative;
+  width: 60vw;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  
+}
+
+.exam_title {
+  display: flex;
+}
+
+.titlebg {
+  display: flex;
+  position: relative;
+  background-color: #5988FF;
+  border-width: 2px;
+  border-radius: 0 0 25px 0;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 6rem;
+
+  
+  padding-right: 3%;
+}
+
+.titlebg_chword {
+  width: 27%;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 6rem;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+.titlebg_decword {
+  
+  width: 70%;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #fff;
+  text-align: right;
+  padding-right: 3%;
+}
+
+.exam_chapter {
+  width: 57%;
+  padding-left: 3%;
+}
+
+.exam_chapter a {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 6rem;
+}
+
+.exam_box {
+  position: relative;
+
+  width: 60vw;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+}
+
+.exam_item {
+  padding: 5% 0 5% 0;
+
+  border-width: 0 0 2px 0;
+  border-color: rgba(87, 135, 255, 0.3);
+  border-style: dashed;
+}
+
+.exam_item_header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.num {
+  background-color: #5988FF;
+  width: 8%;
+  height: 1.8rem;
+  text-align: right;
+  padding-left: 4%;
+  padding-right: 1%;
+
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.topic {
+  width: 92%;
+  padding-left: 1%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+/*Exam BTN*/
+.exam_btn {
+  position: relative;
+  margin-top: 2%;
+}
+
+.exam_btn_num {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 8%;
+  padding-left: 6%;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Radio Custom */
+/* Create a custom radio button */
+.container {
+  position: relative;
+
+  left: 9%;
+  /*padding-left: 35px;
+  margin-bottom: 12px;
+  
+  font-size: 22px;*/
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /**/
+  width: 50%;
+  border-width: 1px;
+  border-color: #aaa;
+  border-style: solid;
+  border-radius: 8px;
+
+  padding: 2% 6% 2% 3%;
+}
+
+.exam_answord {
+  position: relative;
+  left: 10%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4%;
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 1.5px solid #4d4d4d;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  border-color: #5988FF;
+}
+
+.container:hover input ~ .exam_answord {
+  color: #5988FF;
+}
+
+/* When the radio button is checked, add a blue background */
+input:checked ~ .checkmark {
+  border: 2px solid #5988FF;
+}
+
+input:checked ~ .exam_answord {
+  color: #5988FF;
+  font-weight: 500;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background: #5988FF;
+}
+/****************/
+
+.menubox {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  body::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+  }
+
+  .titlebg {
+    border-radius: 0 0 15px 0;
+    width: 42%;
+  }
+
+  .num {
+    width: 10%;
+  }
+
+  .topic {
+    width: 88%;
+  }
+
+  .container {
+    left: 11%;
+    width: 70%;
+  }
+
+  .titlebg_chword {
+    width: 20%;
+    
+  }
+  
+  .titlebg_decword {
+    
+    width: 60%;
+    
+  }
+}
+
+@media (max-width: 500px) {
+  .examPage_content {
+    width: 100vw;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+  .exam_chapter a {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+  .titlebg {
+    border-radius: 0 0 10px 0;
+    width: 40%;
+    height: 5rem;
+    padding-right: 1%;
+  }
+
+  .titlebg_chword {
+    width: 27%;
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  
+  .titlebg_decword {
+    
+    width: 50%;
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+
+  .exam_box {
+    width: 100vw;
+  }
+
+  .num {
+    width: 10%;
+    padding-left: 5%;
+    padding-right: 8%;
+  }
+
+  .topic {
+    width: 80%;
+    padding-left: 2%;
+  }
+
+  .exam_btn {
+    margin-top: 4%;
+  }
+
+  .exam_btn_num {
+    width: 10%;
+    padding-left: 7%;
+  }
+
+  .container {
+    left: 15%;
+    width: 75%;
+    padding: 3.5% 7% 3.5% 3.5%;
+  }
+
+  .exam_answord {
+    left: 14%;
+  }
+}
